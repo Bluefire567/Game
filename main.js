@@ -16,8 +16,8 @@ var mainState = {
         game.load.image('tree', 'tree.png', 75, 70);
         game.load.image('dogleft','dogRight.png');
         game.load.image('dogright','dogRight.png');
-        game.load.image('redcardown','carRed(down)');
-        game.load.image('redcarup','carRed(up)');
+        game.load.image('redcardown','carRed(down).png');
+        game.load.image('redcarup','carRed(up).png');
         
     },
 
@@ -62,9 +62,6 @@ var mainState = {
 
     }
 }
-
-game.state.add("mainState",mainState);
-game.state.start("mainState");
 
 game.state.add("mainState",mainState);
 game.state.start("mainState");
