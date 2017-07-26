@@ -49,6 +49,7 @@ var mainState = {
         player.animations.add('down', [1, 2, 3, 4], 1, true);
 
         //this.game.camera.follow(player);
+        //
     
 
     },
