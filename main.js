@@ -41,8 +41,6 @@ var mainState = {
 
         //Main sprite
         playerdown = game.add.sprite(0 , 100, 'dogdown');
-        //Sprite movement
-        game.physics.enable(playerdown, Phaser.Physics.ARCADE);
 
         //Player movement
         game.physics.enable(playerdown , Phaser.Physics.ARCADE);
@@ -59,9 +57,20 @@ var mainState = {
         tree1.
         //Sprites  
         redcar = game.add.sprite(0,200,'redcardown');
+
+        //Housesprite
         house1 = game.add.sprite( 400, 0, 'house');
-       
-        //tree1.body.immovable = true;
+        game.physics.enable(playerdown , Phaser.Physics.ARCADE);
+        house1.body.enable = true; 
+        house1.immovable = true;
+        house1.allowGravity = false;
+        house1.body.gravity.x = 0;
+        house1.body.gravity.y = 0;
+        house1.body.velocity.x = 0;
+        house1.body.velocity.y = 0;
+        house1.body.moves = false;
+
+    //tree1.body.immovable = true;
         //redcar.body.immovable = true;
         //house1.body,.immovable = true;
 
@@ -75,8 +84,6 @@ var mainState = {
         //game.physics.enable(player, Phaser.Physics.ARCADE)
         //game.physics.arcade.gravity.y = 250;
         //playerdown.body.collideWorldBounds = true;
-        game.physics.enable(tree1,redcar,house1);
-        game.physics.collide(playerup, house1, redcar, tree1); 
         cursors = game.input.keyboard.createCursorKeys();
        
     
@@ -84,21 +91,7 @@ var mainState = {
     },
 
     update: function() {
-        //window.graphics = 'graphics';
-        //if (game.physics.arcade.collide(player,tree1,null,null))
-        //{
-//            createTextBox(graphics);
-       //     var space = input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-       //     text = game.add.text(xpos -140, 310, "Such delicious food out!\nI want to try everything. ",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 0 });
-       //     text.destroy(); //not it
-       //     text = game.add.text(xpos -140, 310, "Ohhhhhh… My stomach, it hurts.\nMaybe I shouldn’t have tried all of them.",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 1 });
-        //    space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
-        //    },
-
-        game.physics.arcade.collide(player, tree);
-        game.physics.arcade.collide(player, house);
-
-
+        game.physics.arcade.collide(playerdown, house1);
     
         if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
     {
