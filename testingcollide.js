@@ -26,8 +26,7 @@ var mainState = {
         game.load.image('dogright','dogRight.png');
         game.load.image('redcardown','carRed(down).png');
         game.load.image('redcarup','carRed(up).png');
-        game.load.image('textbox', 'textbox.png')
-        
+        game.load.image('textbox', 'textbox.png');
     },
 
     create: function() {
@@ -46,7 +45,6 @@ var mainState = {
         //Player movement
         game.physics.enable(playerdown , Phaser.Physics.ARCADE);
         game.camera.follow(playerdown);
-        playerdown.body.collideWorldBounds = true;
         playerdown.frame = 1; 
         //Player sprite Animations
         playerdown.animations.add('walkdown',[0,1,2,3], 10, true);
@@ -78,12 +76,15 @@ var mainState = {
         //game.physics.arcade.gravity.y = 250;
         //playerdown.body.collideWorldBounds = true;
         game.physics.arcade.enable(house1);
-        //tree1.body.immovable = true;
+        game.phsyics.arcade.enable(playerdown);
 
-        //game.physics.collide(); 
+        playerdown.body.collideWorldBounds = true;
+        house1.body.collideWorldBounds = true;
+        //tree1.body.immovable = true;
 
         playerdown.body.onCollide = new Phaser.Signal();
         playerdown.body.oncollide.add(text)
+        //game.physics.collide(); 
 
 
         cursors = game.input.keyboard.createCursorKeys();
@@ -94,9 +95,10 @@ var mainState = {
 
     text: function() {
         game.load.image('textbox')
-    }
+    },
 
     update: function() {
+         game.physics.arcade.collide(playerdown, house1);
         //window.graphics = 'graphics';
         //if (game.physics.arcade.collide(player,tree1,null,null))
         //{
@@ -107,8 +109,6 @@ var mainState = {
        //     text = game.add.text(xpos -140, 310, "Ohhhhhh… My stomach, it hurts.\nMaybe I shouldn’t have tried all of them.",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 1 });
         //    space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
         //    },
-        game.physics.arcade.collide(playerdown, house1);
-    
         if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
     {
         playerdown.x -= 4;
