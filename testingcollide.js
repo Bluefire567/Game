@@ -11,6 +11,8 @@ var ypos;
 var edge;
 var side;
 var platforms;
+var graphics;
+
 
 var game = new Phaser.Game(800,600,Phaser.CANVAS,'game.Div')
 var mainState = {
@@ -39,9 +41,7 @@ var mainState = {
 
         //Main sprite
         playerdown = game.add.sprite(0 , 100, 'dogdown');
-        //Sprite movement
-        game.physics.enable(playerdown, Phaser.Physics.ARCADE);
-
+    
         //Player movement
         game.physics.enable(playerdown , Phaser.Physics.ARCADE);
         game.camera.follow(playerdown);
@@ -58,14 +58,14 @@ var mainState = {
         house1 = game.add.sprite( 400, 0, 'house');
 
 
-
-
-       
         //tree1.body.immovable = true;
         //redcar.body.immovable = true;
         //house1.body,.immovable = true;
 
-        
+        platforms = game.add.group();
+        platforms.enableBody = true;
+        var bg = platforms.create(0, 0, 'top1');
+        bg.body.immovable = true;
 
         //ame.physics.enable([playerdown, tree1] , Phaser.Physics.ARCADE);
 
@@ -75,15 +75,15 @@ var mainState = {
         //game.physics.enable(player, Phaser.Physics.ARCADE)
         //game.physics.arcade.gravity.y = 250;
         //playerdown.body.collideWorldBounds = true;
-        game.physics.arcade.enable(house1);
+        //game.physics.arcade.enable(house1);
         game.phsyics.arcade.enable(playerdown);
 
         playerdown.body.collideWorldBounds = true;
-        house1.body.collideWorldBounds = true;
+        //house1.body.collideWorldBounds = true;
         //tree1.body.immovable = true;
 
-        playerdown.body.onCollide = new Phaser.Signal();
-        playerdown.body.oncollide.add(text)
+        //playerdown.body.onCollide = new Phaser.Signal();
+        //playerdown.body.oncollide.add(text)
         //game.physics.collide(); 
 
 
@@ -98,7 +98,35 @@ var mainState = {
     },
 
     update: function() {
-         game.physics.arcade.collide(playerdown, house1);
+        showDialogue = false;
+            game.physics.arcade.collide(playerdown, platforms);
+            game.camera.follow(playerdown);
+            var graphics = game.add.graphics(20, 100);
+            var text;
+            var xpos = Math.round(playerdown.position.x);
+            if(game.physics.arcade.collide(player,house1,null,null)){
+                game.paused = true;
+                createTextBox(graphics);
+                var space = input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+                text = game.add.text(xpos -140, 310, "Such delicious food out!\nI want to try everything. ",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 0 });
+                text.destroy(); //not it
+                text = game.add.text(xpos -140, 310, "Ohhhhhh… My stomach, it hurts.\nMaybe I shouldn’t have tried all of them.",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 1 });
+                space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
+            }
+            if(game.physics.arcade.collide(playerdown,tree1,null,null,)){
+                game.paused = true;
+                createTextBox(graphics);
+                text = game.add.text(xpos - 80, 310, "What is the point of this shelf?\nTo put my shoes? ",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 0 });
+                var space = input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+                space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
+            }
+            if(game.physics.arcade.collide(playerdown, redcar,null,null)){
+                game.paused = true;
+                createTextBox(graphics);
+                text = game.add.text(xpos-140, 310, "So many books!\nI wonder if Father actually read them. ",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 0 });
+                var space = input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+                space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
+            }
         //window.graphics = 'graphics';
         //if (game.physics.arcade.collide(player,tree1,null,null))
         //{
@@ -136,6 +164,21 @@ var mainState = {
         playerdown.animations.stop = false;  
     }
     },
+
+    function createTextBox(graphics,text){
+    // draw a rectangle
+    var xpos = Math.round(player.position.x);
+    var ypos = Math.round(player.position.y);
+    graphics.lineStyle(0);
+    graphics.beginFill(0x333333, 1);
+    player.events.onInputOver.add(function() {  graphics.graphicsData[0].fillColor = 0x5B5B5B; });
+    graphics.drawRect(xpos-170, 200, 350, 100);
+    graphics.endFill();
+
+    window.graphics = graphics;
+ 
+
+}
 
     render: function() {
         game.debug.spriteInfo(playerdown,20, 32);
