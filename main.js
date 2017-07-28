@@ -94,6 +94,11 @@ var mainState = {
        //     text = game.add.text(xpos -140, 310, "Ohhhhhh… My stomach, it hurts.\nMaybe I shouldn’t have tried all of them.",{font: "10pt Courier", fill: "#DC9CD2", stroke: "#BF7FCE", strokeThickness: 1 });
         //    space.onDown.add(function () {   actionOnClick(graphics, text); game.paused = false;});
         //    },
+
+        game.physics.arcade.collide(player, tree);
+        game.physics.arcade.collide(player, house);
+
+
     
         if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT))
     {
