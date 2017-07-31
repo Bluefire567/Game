@@ -76,7 +76,7 @@ var mainState = {
         //game.physics.arcade.gravity.y = 250;
         //playerdown.body.collideWorldBounds = true;
         //game.physics.arcade.enable(house1);
-        game.phsyics.arcade.enable(playerdown);
+        game.physics.arcade.enable(playerdown);
 
         playerdown.body.collideWorldBounds = true;
         //house1.body.collideWorldBounds = true;
