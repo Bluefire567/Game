@@ -28,7 +28,7 @@ var mainState = {
         game.load.image('dogright','dogRight.png');
         game.load.image('redcardown','carRed(down).png');
         game.load.image('redcarup','carRed(up).png');
-        game.load.image('text', 'textbox.jpg')
+        game.load.image('text', 'text.png')
         
     },
 
@@ -39,12 +39,15 @@ var mainState = {
         game.physics.startSystem(Phaser.Physics.arcade);
 //Background
         background = game.add.tileSprite(0,0,2000,1200,'background');
-        background = fixedToCamara = true;
-//Text
-        style = { font: "50px Arial", fill: "#ff0044", align: "center" };
-        text = game.add.text(game.world.centerX, game.world.centerY, "HELLO",style)
+//Text  
+        //textbox = game.add.sprite(game.world.centerX, game.world.centerY,'text');
+        //textbox.fixedToCamara = true;
+        //textbox.cameraOffset.setTo(200,550);
+        //textbox.scale.setTo(1.5,0.7);
+        style = {font: "30px Courier", fontWeight: 'bold', fill: "#000000", align: "center" };
+        text = game.add.text(game.world.centerX, game.world.centerY, "Hello!",style);
         text.fixedToCamera = true;
-        text.cameraOffset.setTo(0,550);
+        text.cameraOffset.setTo(0,570);
 
 //Main sprite
         playerdown = game.add.sprite(0 , 100, 'dogdown');
@@ -58,6 +61,7 @@ var mainState = {
         playerdown.animations.add('walkright',[4,5,6,7], 10, true);
         playerdown.animations.add('walkup',[8,9,10,11], 10, true);
         playerdown.animations.add('walkleft',[12,13,14,15], 10, true);
+
 //Obstacles
         tree1 = game.add.sprite( 260, 140, 'tree');
         redcar = game.add.sprite(0,200,'redcardown');
@@ -81,10 +85,10 @@ var mainState = {
     }
 
         else if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT))
-    { 
-            playerdown.body.moves = true;
-            playerdown.body.velocity.x += 4;
-            playerdown.animations.play('walkright');
+    {
+        playerdown.body.moves = true;
+        playerdown.body.velocity.x += 4;
+        playerdown.animations.play('walkright');
     }
         else if (game.input.keyboard.isDown(Phaser.Keyboard.UP))
     {
@@ -110,6 +114,17 @@ var mainState = {
 
 
     },
+
+   // interaction: function(){
+
+   // }
+
+
+
+
+
+
+
 
     render: function() {
       game.debug.spriteInfo(playerdown,20, 32);
