@@ -58,6 +58,7 @@ var mainState = {
        
         redcar = game.add.sprite(0,200,'redcardown');
         house1 = game.add.sprite( 400, 0, 'house');
+
         bush1 = game.add.sprite(150, 0, 'bush');
         bush1.scale.setTo(0.5, 0.5);
         bush2 = game.add.sprite(150, 50, 'bush');
@@ -88,6 +89,8 @@ var mainState = {
         bush14.scale.setTo(0.5, 0.5);
         bush15 = game.add.sprite(970, 300, 'bush');
         bush15.scale.setTo(0.5, 0.5);
+        bush15p5 = game.add.sprite(1025,300, 'bush');
+        bush15p5.scale.setTo(0.5,0.5);
         bush16 = game.add.sprite(1080, 300, 'bush');
         bush16.scale.setTo(0.5, 0.5);
         bush17 = game.add.sprite(1135, 300, 'bush');
@@ -428,7 +431,7 @@ var mainState = {
 
 
 //Obstacle Settings
-        game.physics.enable([playerdown,house1,tree1,bush1,bush2,bush3,bush4,bush5, bush6, bush7, bush8, bush9, bush10, bush11, bush12, bush13, bush14, bush15, bush16,bush17,bush18,bush19, bush20, bush21, bush22, bush23, bush24, bush25, bush26, bush27, bush28, bush29,bush30,bush31, bush32,bush33, bush34,bush35 ], Phaser.Physics.ARCADE);
+        game.physics.enable([playerdown,house1,tree1,bush1,bush2,bush3,bush4,bush5, bush6, bush7, bush8, bush9, bush10, bush11, bush12, bush13, bush14, bush15, bush15p5,bush16,bush17,bush18,bush19, bush20, bush21, bush22, bush23, bush24, bush25,bush26,bush27,bush28,bush29,bush30,bush31,bush32,bush33,bush34,bush35,bush36,bush37,bush38,bush39,bush41,bush42,bush44,bush46,bush48,bush50,bush52,bush54,bush56,bush58,bush60,bush62,bush64,bush66,bush68,bush70,bush72,bush74,bush76,bush78,bush80,bush82,bush84,bush86,bush88,bush90,bush92,bush94,bush96,bush98,bush100,bush102,bush104,bush106,bush108,bush110,bush112,bush114,bush116,bush118,bush120,bush122,bush124,bush126,bush128,bush130,bush132,bush134,bush136,bush138,bush142,bush146,bush148,bush150,bush152,bush154,bush156,bush158,bush160,bush162], Phaser.Physics.ARCADE);
         house1.body.immovable = true; 
         tree1.body.immovable = true;
         bush1.body.immovable = true;
@@ -446,6 +449,7 @@ var mainState = {
         bush13.body.immovable = true;
         bush14.body.immovable = true;
         bush15.body.immovable = true;
+        bush15p5.body.immovable = true;
         bush16.body.immovable = true;
         bush17.body.immovable = true;
         bush18.body.immovable = true;
@@ -470,7 +474,6 @@ var mainState = {
         bush37.body.immovable = true;
         bush38.body.immovable = true;
         bush39.body.immovable = true;
-        bush40.body.immovable = true;
         bush41.body.immovable = true;
         bush42.body.immovable = true;
         bush44.body.immovable = true;
@@ -542,8 +545,8 @@ var mainState = {
     game.physics.arcade.collide(playerdown,bush2);
     game.physics.arcade.collide(playerdown,bush3);
     game.physics.arcade.collide(playerdown,bush4);
-    game.physics.arcade.collide(playerdown, bush5);
-    game.physics.arcade.collide(playerdown, bush6);
+    game.physics.arcade.collide(playerdown,bush5);
+    game.physics.arcade.collide(playerdown,bush6);
     game.physics.arcade.collide(playerdown, bush7);
     game.physics.arcade.collide(playerdown, bush8);
     game.physics.arcade.collide(playerdown, bush9);
@@ -553,6 +556,7 @@ var mainState = {
     game.physics.arcade.collide(playerdown, bush13);
     game.physics.arcade.collide(playerdown, bush14);
     game.physics.arcade.collide(playerdown, bush15);
+    game.physics.arcade.collide(playerdown, bush15p5);
     game.physics.arcade.collide(playerdown, bush16);
     game.physics.arcade.collide(playerdown, bush17);
     game.physics.arcade.collide(playerdown, bush18);
@@ -573,8 +577,78 @@ var mainState = {
     game.physics.arcade.collide(playerdown, bush33);
     game.physics.arcade.collide(playerdown, bush34);
     game.physics.arcade.collide(playerdown, bush35);
-   
+    game.physics.arcade.collide(playerdown, bush36);
+    game.physics.arcade.collide(playerdown, bush37);
+    game.physics.arcade.collide(playerdown, bush38);
+    game.physics.arcade.collide(playerdown, bush39);
+    game.physics.arcade.collide(playerdown, bush41);
+    game.physics.arcade.collide(playerdown, bush42);
+    game.physics.arcade.collide(playerdown, bush44);
+    game.physics.arcade.collide(playerdown, bush46);
+    game.physics.arcade.collide(playerdown, bush48);
+    game.physics.arcade.collide(playerdown, bush50);
+    game.physics.arcade.collide(playerdown, bush52);
+    game.physics.arcade.collide(playerdown, bush54);
+    game.physics.arcade.collide(playerdown, bush56);
+    game.physics.arcade.collide(playerdown, bush58);
+    game.physics.arcade.collide(playerdown, bush60);
+    game.physics.arcade.collide(playerdown, bush62);
+    game.physics.arcade.collide(playerdown, bush64);
+    game.physics.arcade.collide(playerdown, bush66);
+    game.physics.arcade.collide(playerdown, bush68);
+    game.physics.arcade.collide(playerdown, bush70);
+    game.physics.arcade.collide(playerdown, bush72);
+    game.physics.arcade.collide(playerdown, bush74);
+    game.physics.arcade.collide(playerdown, bush76);
+    game.physics.arcade.collide(playerdown, bush78);
+    game.physics.arcade.collide(playerdown, bush80);
+    game.physics.arcade.collide(playerdown, bush82);
+    game.physics.arcade.collide(playerdown, bush84);
+    game.physics.arcade.collide(playerdown, bush86);
+    game.physics.arcade.collide(playerdown, bush88);
+    game.physics.arcade.collide(playerdown, bush90);
+    game.physics.arcade.collide(playerdown, bush92);
+    game.physics.arcade.collide(playerdown, bush94);
+    game.physics.arcade.collide(playerdown, bush96);
+    game.physics.arcade.collide(playerdown, bush98);
+    game.physics.arcade.collide(playerdown, bush100);
+    game.physics.arcade.collide(playerdown, bush102);
+    game.physics.arcade.collide(playerdown, bush104);
+    game.physics.arcade.collide(playerdown, bush106);
+    game.physics.arcade.collide(playerdown, bush108);
+    game.physics.arcade.collide(playerdown, bush110);
+    game.physics.arcade.collide(playerdown, bush112);
+    game.physics.arcade.collide(playerdown, bush114);
+    game.physics.arcade.collide(playerdown, bush116);
+    game.physics.arcade.collide(playerdown, bush118);
+    game.physics.arcade.collide(playerdown, bush120);
+    game.physics.arcade.collide(playerdown, bush122);
+    game.physics.arcade.collide(playerdown, bush124);
+    game.physics.arcade.collide(playerdown, bush126);
+    game.physics.arcade.collide(playerdown, bush128);
+    game.physics.arcade.collide(playerdown, bush130);
+    game.physics.arcade.collide(playerdown, bush132);
+    game.physics.arcade.collide(playerdown, bush134);
+    game.physics.arcade.collide(playerdown, bush136);
+    game.physics.arcade.collide(playerdown, bush138);
+    game.physics.arcade.collide(playerdown, bush142);
+    game.physics.arcade.collide(playerdown, bush144);
+    game.physics.arcade.collide(playerdown, bush146);
+    game.physics.arcade.collide(playerdown, bush148);
+    game.physics.arcade.collide(playerdown, bush150);
+    game.physics.arcade.collide(playerdown, bush152);
+    game.physics.arcade.collide(playerdown, bush154);
+    game.physics.arcade.collide(playerdown, bush156);
+    game.physics.arcade.collide(playerdown, bush158);
+    game.physics.arcade.collide(playerdown, bush160);
+    game.physics.arcade.collide(playerdown, bush162);
 
+
+
+
+    
+
+    
     if (game.physics.arcade.collide(playerdown,house1))
     {
         text.setText('you found a house!')
