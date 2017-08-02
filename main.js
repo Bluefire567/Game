@@ -553,7 +553,6 @@ var mainState = {
         bush116.body.immovable = true;
         bush117.body.immovable = true;
         bush118.body.immovable = true;
-        bush119.body.immovable = true;
         bush120.body.immovable = true;
         bush121.body.immovable = true;
         bush122.body.immovable = true;
