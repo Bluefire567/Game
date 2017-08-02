@@ -26,8 +26,7 @@ var mainState = {
         game.load.spritesheet('dogdown','1rowspritesheet2.png', 101, 120 );
         game.load.image('dogleft','dogLeft.png');
         game.load.image('dogright','dogRight.png');
-        game.load.image('redcardown','carRed(down).png');
-        game.load.image('redcarup','carRed(up).png');
+        game.load.image('redcar','car2.png');
         game.load.image('bush','s2-bush.png');
         game.load.image('text', 'text.png');
         
@@ -56,7 +55,8 @@ var mainState = {
 
 //Obstacles
        
-        redcar = game.add.sprite(0,200,'redcardown');
+        redcar = game.add.sprite(50,800,'redcardown');
+        redcar.scale.setTo(1.4,1.4);
         house1 = game.add.sprite( 400, 0, 'house');
 
         bush1 = game.add.sprite(150, 0, 'bush');
@@ -193,16 +193,16 @@ var mainState = {
         //bush26.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 1030, 'bush');
         //bush26.scale.setTo(0.5, 0.5);
-        bush62 = game.add.sprite(1485, 1180, 'bush');
+        bush62 = game.add.sprite(1450, 1130, 'bush');
         bush62.scale.setTo(0.5, 0.5);
         
-        bush63 = game.add.sprite(1320, 680, 'bush');
+        bush63 = game.add.sprite(1320, 530, 'bush');
         bush63.scale.setTo(0.5, 0.5);
-        bush64 = game.add.sprite(1320, 730, 'bush');
+        bush64 = game.add.sprite(1320, 580, 'bush');
         bush64.scale.setTo(0.5, 0.5);
-        bush65 = game.add.sprite(1320, 880, 'bush');
+        bush65 = game.add.sprite(1320, 630, 'bush');
         bush65.scale.setTo(0.5, 0.5);
-        bush66 = game.add.sprite(1320, 930, 'bush');
+        bush66 = game.add.sprite(1320, 680, 'bush');
         bush66.scale.setTo(0.5, 0.5);
 
         bush67 = game.add.sprite(1320, 880, 'bush');
@@ -282,19 +282,19 @@ var mainState = {
         bush102 = game.add.sprite(1045, 1130, 'bush');
         bush102.scale.setTo(0.5, 0.5);
         //
-        bush103 = game.add.sprite(1155, 1130, 'bush');
+        bush103 = game.add.sprite(1100, 1130, 'bush');
         bush103.scale.setTo(0.5, 0.5);
-        bush104 = game.add.sprite(1210, 1130, 'bush');
+        bush104 = game.add.sprite(1150, 1130, 'bush');
         bush104.scale.setTo(0.5, 0.5);
-        bush105 = game.add.sprite(1265, 1130, 'bush');
+        bush105 = game.add.sprite(1200, 1130, 'bush');
         bush105.scale.setTo(0.5, 0.5);
-        bush106 = game.add.sprite(1320, 1130, 'bush');
+        bush106 = game.add.sprite(1250, 1130, 'bush');
         bush106.scale.setTo(0.5, 0.5);
-        bush107 = game.add.sprite(1375, 1130, 'bush');
+        bush107 = game.add.sprite(1300, 1130, 'bush');
         bush107.scale.setTo(0.5, 0.5);
-        bush108 = game.add.sprite(1430, 1130, 'bush');
+        bush108 = game.add.sprite(1350, 1130, 'bush');
         bush108.scale.setTo(0.5, 0.5);
-        bush109 = game.add.sprite(1485, 1130, 'bush');
+        bush109 = game.add.sprite(1400, 1130, 'bush');
         bush109.scale.setTo(0.5, 0.5);
 
 
@@ -415,8 +415,8 @@ var mainState = {
         bush162 = game.add.sprite(1485, 1380, 'bush');
         bush162.scale.setTo(0.5, 0.5);
 
-        otherdog = game.add.sprite(1550, 340, 'otherdog');
-        otherdog.scale.setTo(0.5, 0.5);
+        otherdog = game.add.sprite(1380, 500, 'otherdog');
+        otherdog.scale.setTo(0.3, 0.3);
         tree1 = game.add.sprite(450, 990, 'tree');
         tree1.scale.setTo(0.7,0.7);
 
@@ -425,10 +425,11 @@ var mainState = {
         //textbox.fixedToCamara = true;
         //textbox.cameraOffset.setTo(200,550);
         //textbox.scale.setTo(1.5,0.7);
-        style = {font: "30px Courier", fontWeight: 'bold', fill: "#000000", align: "center" };
-        text = game.add.text(game.world.centerX, game.world.centerY, "Hello!",style);
+        style = {font: "20px Courier", fontWeight: 'bold', fill: "#000000", align: "left" };
+        //game.time.events.add(2000, text);
+        text = game.add.text(game.world.centerX, game.world.centerY, "It has been nearly a day since you last saw your owner.\nNot that they had shown any regret\nthey left you by the side of the road and drove off.\nIt had been that way your whole life...\njust the fear you lived in day after day until now.\nWhen you were all alone...\nFinding food was hard, but avoiding danger was harder.\nAnd that was your whole life now",style);
         text.fixedToCamera = true;
-        text.cameraOffset.setTo(0,570);
+        text.cameraOffset.setTo(0,400);
 
 
 //Obstacle Settings
@@ -596,11 +597,11 @@ var mainState = {
         bush161.body.immovable = true;
         bush162.body.immovable = true;
         otherdog.body.immovable = true;
-        redcar.body.immovable = true;
+
     },
 
     update: function() {
-    game.physics.arcade.collide(playerdown,tree1);
+      game.physics.arcade.collide(playerdown,tree1);
     game.physics.arcade.collide(playerdown,bush1);
     game.physics.arcade.collide(playerdown,bush2);
     game.physics.arcade.collide(playerdown,bush3);
@@ -762,17 +763,8 @@ var mainState = {
     game.physics.arcade.collide(playerdown, bush161);
     game.physics.arcade.collide(playerdown, bush162);
 
-
-
-
-
-
-
-
-    
-    if (game.physics.arcade.collide(playerdown,house1))
-    {
-        text.setText('you found a house!')
+    if (game.physics.arcade.collide(playerdown,house1)){
+        text.visible = false;
     }
 
 
