@@ -432,11 +432,11 @@ var mainState = {
         text2.fixedToCamera = true;
         text2.cameraOffset.setTo(0,470);
         text2.visible = false;
-        text3 = game.add.text(game.world.centerX, game.world.centerY,'The other dog you stumbled upon was anything but welcoming.\nAfter getting as far away from the dog as you could\nyou started to let yourself relax. Until...you felt a small itch on your leg.\nNo worry, you just scratched and went to continue on your way.\nBut, it was there again, the itch but this time seemingly on every part of your body\nall at once. Fleas. But what were you to do?\nThere was no one to help, no one to clean you or get you any kind of treatment.\nWeakening, you limped off. ', style);
+        text3 = game.add.text(game.world.centerX, game.world.centerY,'The other dog you stumbled upon was anything but welcoming.\nAfter getting as far away from the dog as you could\nyou started to let yourself relax.\nUntil...you felt a small itch on your leg.\nall at once. Fleas. But what were you to do?\nThere was no one to help...\nno one to clean you or get you any kind of treatment.\nWeakening, you limped off. ', style);
         text3.fixedToCamera = true;
         text3.cameraOffset.setTo(0,400);
         text3.visible = false;
-        text4 = game.add.text(game.world.centerX, game.world.centerY,'How long were you out here?\nThe days which once seemed bright and full of life\nare now just filled with traps that you hid from.\nThe nights were worse, the dangers becoming more prominent.\nNot to mention you had no idea where you were...\nwhere you were going...or even what you were doing...\nWas there something you were hoping for?\nYou weren’t even sure you should be hoping for something like a Home\nso you just passed the time with the only thing you could do: Survive', style);
+        text4 = game.add.text(game.world.centerX, game.world.centerY,'How long were you out here?\neverything seems filled with traps that you hide from.\nThe nights were worse, the dangers becoming more prominent.\nNot to mention you had no idea where you were...\nwhere you were going...or even what you were doing...\nWas there something you were hoping for?\nso you just passed the time with the only thing you could do:\nSurvive...', style);
         text4.fixedToCamera = true;
         text4.cameraOffset.setTo(0,400);
         text4.visible = false;
@@ -446,7 +446,7 @@ var mainState = {
         text5.visible = false;
         text6 = game.add.text(game.world.centerX, game.world.centerY,'You could not believe the person picked you up and ...pet you?\nNo hitting, kicking, or even yelling.\nInstead, you felt the care they had for you, a new emotion.\nClosing your eyes, you leaned against them, tired, but happy.', style);
         text6.fixedToCamera = true;
-        text6.cameraOffset.setTo(0,400);
+        text6.cameraOffset.setTo(0,490);
         text6.visible = false; 
 
 
