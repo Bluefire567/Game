@@ -26,7 +26,7 @@ var mainState = {
         game.load.spritesheet('dogdown','1rowspritesheet2.png', 101, 120 );
         game.load.image('dogleft','dogLeft.png');
         game.load.image('dogright','dogRight.png');
-        game.load.image('redcar','car2.png');
+        game.load.image('redcar','car.png');
         game.load.image('bush','s2-bush.png');
         game.load.image('text', 'text.png');
         
@@ -54,11 +54,9 @@ var mainState = {
         playerdown.animations.add('walkleft',[12,13,14,15], 10, true);
 
 //Obstacles
-       
-        redcar = game.add.sprite(50,800,'redcardown');
-        redcar.scale.setTo(1.4,1.4);
         house1 = game.add.sprite( 400, 0, 'house');
-
+        tree1 = game.add.sprite(450, 990, 'tree');
+        tree1.scale.setTo(0.7,0.7);
         bush1 = game.add.sprite(150, 0, 'bush');
         bush1.scale.setTo(0.5, 0.5);
         bush2 = game.add.sprite(150, 50, 'bush');
@@ -417,23 +415,44 @@ var mainState = {
 
         otherdog = game.add.sprite(1380, 500, 'otherdog');
         otherdog.scale.setTo(0.3, 0.3);
-        tree1 = game.add.sprite(450, 990, 'tree');
-        tree1.scale.setTo(0.7,0.7);
+        redcar = game.add.sprite(50,1300,'redcar');
+        redcar.scale.setTo(1.4,1.4);
+        
 
-        //Text  
+//Text  
         //textbox = game.add.sprite(game.world.centerX, game.world.centerY,'text');
         //textbox.fixedToCamara = true;
         //textbox.cameraOffset.setTo(200,550);
         //textbox.scale.setTo(1.5,0.7);
         style = {font: "20px Courier", fontWeight: 'bold', fill: "#000000", align: "left" };
-        //game.time.events.add(2000, text);
         text = game.add.text(game.world.centerX, game.world.centerY, "It has been nearly a day since you last saw your owner.\nNot that they had shown any regret\nthey left you by the side of the road and drove off.\nIt had been that way your whole life...\njust the fear you lived in day after day until now.\nWhen you were all alone...\nFinding food was hard, but avoiding danger was harder.\nAnd that was your whole life now",style);
         text.fixedToCamera = true;
         text.cameraOffset.setTo(0,400);
+        text2 = game.add.text(game.world.centerX, game.world.centerY,'You carefully approached what looked like a large house.\nSniffing around, you could smell the scent of another dog\nyou feet yourself droop...\nYou could not help but imagine the life another dog living here\nBeing fed well, and clean, and ...loved.', style);
+        text2.fixedToCamera = true;
+        text2.cameraOffset.setTo(0,470);
+        text2.visible = false;
+        text3 = game.add.text(game.world.centerX, game.world.centerY,'The other dog you stumbled upon was anything but welcoming.\nAfter getting as far away from the dog as you could\nyou started to let yourself relax. Until...you felt a small itch on your leg.\nNo worry, you just scratched and went to continue on your way.\nBut, it was there again, the itch but this time seemingly on every part of your body\nall at once. Fleas. But what were you to do?\nThere was no one to help, no one to clean you or get you any kind of treatment.\nWeakening, you limped off. ', style);
+        text3.fixedToCamera = true;
+        text3.cameraOffset.setTo(0,400);
+        text3.visible = false;
+        text4 = game.add.text(game.world.centerX, game.world.centerY,'How long were you out here?\nThe days which once seemed bright and full of life\nare now just filled with traps that you hid from.\nThe nights were worse, the dangers becoming more prominent.\nNot to mention you had no idea where you were...\nwhere you were going...or even what you were doing...\nWas there something you were hoping for?\nYou weren’t even sure you should be hoping for something like a Home\nso you just passed the time with the only thing you could do: Survive', style);
+        text4.fixedToCamera = true;
+        text4.cameraOffset.setTo(0,400);
+        text4.visible = false;
+        text5 = game.add.text(game.world.centerX, game.world.centerY,'You look for food - nothing there....', style);
+        text5.fixedToCamera = true;
+        text5.cameraOffset.setTo(0,400);
+        text5.visible = false;
+        text6 = game.add.text(game.world.centerX, game.world.centerY,'You could not believe the person picked you up and ...pet you?\nNo hitting, kicking, or even yelling.\nInstead, you felt the care they had for you, a new emotion.\nClosing your eyes, you leaned against them, tired, but happy.', style);
+        text6.fixedToCamera = true;
+        text6.cameraOffset.setTo(0,400);
+        text6.visible = false; 
+
 
 
 //Obstacle Settings
-        game.physics.enable([playerdown,house1,tree1,bush1,bush2,bush3,bush4,bush5, bush6, bush7, bush8, bush9, bush10, bush11, bush12, bush13, bush14, bush15, bush15p5,bush16,bush17,bush18,bush19, bush20, bush21, bush22, bush23, bush24, bush25,bush26,bush27,bush28,bush29,bush30,bush31,bush32,bush33,bush34,bush35,bush36,bush37,bush38,bush39,bush41,bush42,bush43,bush44,bush45,bush46,bush47,bush48,bush49,bush50,bush51,bush52,bush53,bush54,bush55,bush56,bush57,bush58,bush59,bush60,bush61,bush62,bush63,bush64,bush65,bush66,bush67,bush68,bush69,bush67,bush68,bush69,bush70,bush71,bush72,bush73,bush74,bush75,bush76,bush77,bush78,bush79,bush80,bush81,bush82,bush83,bush84,bush85,bush86,bush87,bush88,bush89,bush90,bush91,bush92,bush93,bush94,bush95,bush96,bush97,bush98,bush99,bush100,bush101,bush102,bush103,bush104,bush105,bush106,bush107,bush108,bush109,bush110,bush111,bush112,bush113,bush114,bush115,bush116,bush117,bush118,bush120,bush121,bush122,bush123,bush124,bush125,bush126,bush127,bush128,bush129,bush130,bush131,bush132,bush133,bush134,bush135,bush136,bush137,bush138,bush139,bush141,bush142,bush143,bush144,bush145,bush146,bush147,bush148,bush149,bush150,bush151,bush152,bush153,bush154,bush155,bush156,bush157,bush158,bush159,bush160,bush161,bush162], Phaser.Physics.ARCADE);
+        game.physics.enable([playerdown,house1,tree1,bush1,bush2,bush3,bush4,bush5, bush6, bush7, bush8, bush9, bush10, bush11, bush12, bush13, bush14, bush15, bush15p5,bush16,bush17,bush18,bush19, bush20, bush21, bush22, bush23, bush24, bush25,bush26,bush27,bush28,bush29,bush30,bush31,bush32,bush33,bush34,bush35,bush36,bush37,bush38,bush39,bush41,bush42,bush43,bush44,bush45,bush46,bush47,bush48,bush49,bush50,bush51,bush52,bush53,bush54,bush55,bush56,bush57,bush58,bush59,bush60,bush61,bush62,bush63,bush64,bush65,bush66,bush67,bush68,bush69,bush67,bush68,bush69,bush70,bush71,bush72,bush73,bush74,bush75,bush76,bush77,bush78,bush79,bush80,bush81,bush82,bush83,bush84,bush85,bush86,bush87,bush88,bush89,bush90,bush91,bush92,bush93,bush94,bush95,bush96,bush97,bush98,bush99,bush100,bush101,bush102,bush103,bush104,bush105,bush106,bush107,bush108,bush109,bush110,bush111,bush112,bush113,bush114,bush115,bush116,bush117,bush118,bush120,bush121,bush122,bush123,bush124,bush125,bush126,bush127,bush128,bush129,bush130,bush131,bush132,bush133,bush134,bush135,bush136,bush137,bush138,bush139,bush141,bush142,bush143,bush144,bush145,bush146,bush147,bush148,bush149,bush150,bush151,bush152,bush153,bush154,bush155,bush156,bush157,bush158,bush159,bush160,bush161,bush162,otherdog,redcar], Phaser.Physics.ARCADE);
         house1.body.immovable = true; 
         tree1.body.immovable = true;
         bush1.body.immovable = true;
@@ -597,11 +616,11 @@ var mainState = {
         bush161.body.immovable = true;
         bush162.body.immovable = true;
         otherdog.body.immovable = true;
+        redcar.body.immovable = true;
 
     },
 
     update: function() {
-      game.physics.arcade.collide(playerdown,tree1);
     game.physics.arcade.collide(playerdown,bush1);
     game.physics.arcade.collide(playerdown,bush2);
     game.physics.arcade.collide(playerdown,bush3);
@@ -765,6 +784,25 @@ var mainState = {
 
     if (game.physics.arcade.collide(playerdown,house1)){
         text.visible = false;
+        text2.visible = true;
+        
+    }
+
+     else if (game.physics.arcade.collide(playerdown,tree1)){
+        text3.visible = false;
+        text4.visible = true;
+    }
+
+    else if (game.physics.arcade.collide(playerdown,otherdog)){
+        text2.visible = false;
+        text3.visible = true;
+    }
+
+
+    else if (game.physics.arcade.collide(playerdown,redcar)){
+        text4.visible = false;
+        text3.visible = false;
+        text6.visible = true;
     }
 
 
@@ -806,9 +844,6 @@ var mainState = {
 
 
     },
-
-
-
     render: function() {
       game.debug.spriteInfo(playerdown,20, 32);
 
