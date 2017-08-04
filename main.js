@@ -58,360 +58,200 @@ var mainState = {
         tree1 = game.add.sprite(450, 990, 'tree');
         tree1.scale.setTo(0.7,0.7);
         bush1 = game.add.sprite(150, 0, 'bush');
-        bush1.scale.setTo(0.5, 0.5);
         bush2 = game.add.sprite(150, 50, 'bush');
-        bush2.scale.setTo(0.5, 0.5);
         bush3 = game.add.sprite(150, 100, 'bush');
-        bush3.scale.setTo(0.5, 0.5);
         bush4 = game.add.sprite(150, 150, 'bush');
-        bush4.scale.setTo(0.5, 0.5);
         bush5 = game.add.sprite(150, 200, 'bush');
-        bush5.scale.setTo(0.5, 0.5);
         bush6 = game.add.sprite(150, 250, 'bush');
-        bush6.scale.setTo(0.5, 0.5);
         bush7 = game.add.sprite(150, 300, 'bush');
-        bush7.scale.setTo(0.5, 0.5);
+      
         bush8 = game.add.sprite(205, 300, 'bush');
-        bush8.scale.setTo(0.5, 0.5);
+      
         bush9 = game.add.sprite(260, 300, 'bush');
-        bush9.scale.setTo(0.5, 0.5);
+       
         bush10 = game.add.sprite(315, 300, 'bush');
-        bush10.scale.setTo(0.5, 0.5);
+     
         bush11 = game.add.sprite(370, 300, 'bush');
-        bush11.scale.setTo(0.5, 0.5);
+       
         bush12 = game.add.sprite(805, 300, 'bush');
-        bush12.scale.setTo(0.5, 0.5);
+      
         bush13 = game.add.sprite(860, 300, 'bush');
-        bush13.scale.setTo(0.5, 0.5);
+      
         bush14 = game.add.sprite(915, 300, 'bush');
-        bush14.scale.setTo(0.5, 0.5);
+       
         bush15 = game.add.sprite(970, 300, 'bush');
-        bush15.scale.setTo(0.5, 0.5);
+      
         bush15p5 = game.add.sprite(1025,300, 'bush');
-        bush15p5.scale.setTo(0.5,0.5);
         bush16 = game.add.sprite(1080, 300, 'bush');
-        bush16.scale.setTo(0.5, 0.5);
+    
         bush17 = game.add.sprite(1135, 300, 'bush');
-        bush17.scale.setTo(0.5, 0.5);
+        
         bush18 = game.add.sprite(1190, 300, 'bush');
-        bush18.scale.setTo(0.5, 0.5);
         bush19 = game.add.sprite(1245, 300, 'bush');
-        bush19.scale.setTo(0.5, 0.5);
         bush20 = game.add.sprite(1300, 300, 'bush');
-        bush20.scale.setTo(0.5, 0.5);
         bush21 = game.add.sprite(1355, 300, 'bush');
-        bush21.scale.setTo(0.5, 0.5);
         bush22 = game.add.sprite(1410, 300, 'bush');
-        bush22.scale.setTo(0.5, 0.5);
         bush23 = game.add.sprite(1465, 300, 'bush');
-        bush23.scale.setTo(0.5, 0.5);
         bush24 = game.add.sprite(1520, 300, 'bush');
-        bush24.scale.setTo(0.5, 0.5);
         bush25 = game.add.sprite(1575, 300, 'bush');
-        bush25.scale.setTo(0.5, 0.5);
 
         bush26 = game.add.sprite(0, 500, 'bush');
-        bush26.scale.setTo(0.5, 0.5);
         bush27 = game.add.sprite(55, 500, 'bush');
-        bush27.scale.setTo(0.5, 0.5);
         bush28 = game.add.sprite(110, 500, 'bush');
-        bush28.scale.setTo(0.5, 0.5);
         bush29 = game.add.sprite(165, 500, 'bush');
-        bush29.scale.setTo(0.5, 0.5);
         bush30 = game.add.sprite(220, 500, 'bush');
-        bush30.scale.setTo(0.5, 0.5);
         bush31 = game.add.sprite(275, 500, 'bush');
-        bush31.scale.setTo(0.5, 0.5);
         bush32 = game.add.sprite(330, 500, 'bush');
-        bush32.scale.setTo(0.5, 0.5);
         bush33 = game.add.sprite(385, 500, 'bush');
-        bush33.scale.setTo(0.5, 0.5);
         bush34 = game.add.sprite(440, 500, 'bush');
-        bush34.scale.setTo(0.5, 0.5);
         bush35 = game.add.sprite(495, 500, 'bush');
-        bush35.scale.setTo(0.5, 0.5);
         bush36 = game.add.sprite(550, 500, 'bush');
-        bush36.scale.setTo(0.5, 0.5);
         bush37 = game.add.sprite(605, 500, 'bush');
-        bush37.scale.setTo(0.5, 0.5);
         bush38 = game.add.sprite(660, 500, 'bush');
-        bush38.scale.setTo(0.5, 0.5);
         bush39 = game.add.sprite(715, 500, 'bush');
-        bush39.scale.setTo(0.5, 0.5);
         bush41 = game.add.sprite(770, 500, 'bush');
-        bush41.scale.setTo(0.5, 0.5);
         bush42 = game.add.sprite(825, 500, 'bush');
-        bush42.scale.setTo(0.5, 0.5);
         bush43 = game.add.sprite(880, 500, 'bush');
-        bush43.scale.setTo(0.5, 0.5);
         bush44 = game.add.sprite(935, 500, 'bush');
-        bush44.scale.setTo(0.5, 0.5);
         bush45 = game.add.sprite(990, 500, 'bush');
-        bush45.scale.setTo(0.5, 0.5);
         bush46 = game.add.sprite(1045, 500, 'bush');
-        bush46.scale.setTo(0.5, 0.5);
         bush47 = game.add.sprite(1100, 500, 'bush');
-        bush47.scale.setTo(0.5, 0.5);
         bush48 = game.add.sprite(1155, 500, 'bush');
-        bush48.scale.setTo(0.5, 0.5);
         bush49 = game.add.sprite(1210, 500, 'bush');
-        bush49.scale.setTo(0.5, 0.5);
         bush50 = game.add.sprite(1265, 500, 'bush');
-        bush50.scale.setTo(0.5, 0.5);
         bush51 = game.add.sprite(1320, 500, 'bush');
-        bush51.scale.setTo(0.5, 0.5);
         bush52 = game.add.sprite(1375, 500, 'bush');
-        bush52.scale.setTo(0.5, 0.5);
         bush53 = game.add.sprite(1430, 500, 'bush');
-        bush53.scale.setTo(0.5, 0.5);
         bush54 = game.add.sprite(1485, 500, 'bush');
-        bush54.scale.setTo(0.5, 0.5);
 
         bush55 = game.add.sprite(1485, 550, 'bush');
-        bush55.scale.setTo(0.5, 0.5);
         bush56 = game.add.sprite(1485, 600, 'bush');
-        bush56.scale.setTo(0.5, 0.5);
         bush57 = game.add.sprite(1485, 650, 'bush');
-        bush57.scale.setTo(0.5, 0.5);
         bush58 = game.add.sprite(1485, 700, 'bush');
-        bush58.scale.setTo(0.5, 0.5);
         bush59 = game.add.sprite(1485, 750, 'bush');
-        bush59.scale.setTo(0.5, 0.5);
         bush60 = game.add.sprite(1485, 800, 'bush');
-        bush60.scale.setTo(0.5, 0.5);
         bush61 = game.add.sprite(1485, 850, 'bush');
-        bush61.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 830, 'bush');
-        //bush26.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 880, 'bush');
-        //bush26.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 930, 'bush');
-        //bush26.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 980, 'bush');
-        //bush26.scale.setTo(0.5, 0.5);
         //bush26 = game.add.sprite(1485, 1030, 'bush');
-        //bush26.scale.setTo(0.5, 0.5);
         bush62 = game.add.sprite(1450, 1130, 'bush');
-        bush62.scale.setTo(0.5, 0.5);
         
         bush63 = game.add.sprite(1320, 530, 'bush');
-        bush63.scale.setTo(0.5, 0.5);
         bush64 = game.add.sprite(1320, 580, 'bush');
-        bush64.scale.setTo(0.5, 0.5);
         bush65 = game.add.sprite(1320, 630, 'bush');
-        bush65.scale.setTo(0.5, 0.5);
         bush66 = game.add.sprite(1320, 680, 'bush');
-        bush66.scale.setTo(0.5, 0.5);
 
         bush67 = game.add.sprite(1320, 880, 'bush');
-        bush67.scale.setTo(0.5, 0.5);
         bush68 = game.add.sprite(1375, 880, 'bush');
-        bush68.scale.setTo(0.5, 0.5);
         bush69 = game.add.sprite(1430, 880, 'bush');
-        bush69.scale.setTo(0.5, 0.5);
 
         bush70 = game.add.sprite(1100, 780, 'bush');
-        bush70.scale.setTo(0.5, 0.5);
         bush71 = game.add.sprite(1100, 830, 'bush');
-        bush71.scale.setTo(0.5, 0.5);
         bush72 = game.add.sprite(1100, 880, 'bush');
-        bush72.scale.setTo(0.5, 0.5);
         bush73 = game.add.sprite(1100, 930, 'bush');
-        bush73.scale.setTo(0.5, 0.5);
         bush74 = game.add.sprite(1100, 980, 'bush');
-        bush74.scale.setTo(0.5, 0.5);
         bush75 = game.add.sprite(1100, 1030, 'bush');
-        bush75.scale.setTo(0.5, 0.5);
         bush76 = game.add.sprite(1100, 1080, 'bush');
-        bush76.scale.setTo(0.5, 0.5);
         
         bush77 = game.add.sprite(385, 930, 'bush');
-        bush77.scale.setTo(0.5, 0.5);
         bush78 = game.add.sprite(385, 980, 'bush');
-        bush78.scale.setTo(0.5, 0.5);
         bush79 = game.add.sprite(385, 1030, 'bush');
-        bush79.scale.setTo(0.5, 0.5);
         bush80 = game.add.sprite(385, 1080, 'bush');
-        bush80.scale.setTo(0.5, 0.5);
 
         bush81 = game.add.sprite(440, 930, 'bush');
-        bush81.scale.setTo(0.5, 0.5);
         bush82 = game.add.sprite(495, 930, 'bush');
-        bush82.scale.setTo(0.5, 0.5);
         bush83 = game.add.sprite(550, 930, 'bush');
-        bush83.scale.setTo(0.5, 0.5);
         bush84 = game.add.sprite(605, 930, 'bush');
-        bush84.scale.setTo(0.5, 0.5);
         bush85 = game.add.sprite(660, 930, 'bush');
-        bush85.scale.setTo(0.5, 0.5);
         bush86 = game.add.sprite(715, 930, 'bush');
-        bush86.scale.setTo(0.5, 0.5);
         bush87 = game.add.sprite(770, 930, 'bush');
-        bush87.scale.setTo(0.5, 0.5);
         bush88 = game.add.sprite(825, 930, 'bush');
-        bush88.scale.setTo(0.5, 0.5);
         bush89 = game.add.sprite(880, 930, 'bush');
-        bush89.scale.setTo(0.5, 0.5);
 
         bush90 = game.add.sprite(385, 1130, 'bush');
-        bush90.scale.setTo(0.5, 0.5);
         bush91 = game.add.sprite(440, 1130, 'bush');
-        bush91.scale.setTo(0.5, 0.5);
         bush92 = game.add.sprite(495, 1130, 'bush');
-        bush92.scale.setTo(0.5, 0.5);
         bush93 = game.add.sprite(550, 1130, 'bush');
-        bush93.scale.setTo(0.5, 0.5);
         bush94 = game.add.sprite(605, 1130, 'bush');
-        bush94.scale.setTo(0.5, 0.5);
         bush95 = game.add.sprite(660, 1130, 'bush');
-        bush95.scale.setTo(0.5, 0.5);
         bush96 = game.add.sprite(715, 1130, 'bush');
-        bush96.scale.setTo(0.5, 0.5);
         bush97 = game.add.sprite(770, 1130, 'bush');
-        bush97.scale.setTo(0.5, 0.5);
         bush98 = game.add.sprite(825, 1130, 'bush');
-        bush98.scale.setTo(0.5, 0.5);
         bush99 = game.add.sprite(880, 1130, 'bush');
-        bush99.scale.setTo(0.5, 0.5);
         bush100 = game.add.sprite(935, 1130, 'bush');
-        bush100.scale.setTo(0.5, 0.5);
         bush101 = game.add.sprite(990, 1130, 'bush');
-        bush101.scale.setTo(0.5, 0.5);
         bush102 = game.add.sprite(1045, 1130, 'bush');
-        bush102.scale.setTo(0.5, 0.5);
         //
         bush103 = game.add.sprite(1100, 1130, 'bush');
-        bush103.scale.setTo(0.5, 0.5);
         bush104 = game.add.sprite(1150, 1130, 'bush');
-        bush104.scale.setTo(0.5, 0.5);
         bush105 = game.add.sprite(1200, 1130, 'bush');
-        bush105.scale.setTo(0.5, 0.5);
         bush106 = game.add.sprite(1250, 1130, 'bush');
-        bush106.scale.setTo(0.5, 0.5);
         bush107 = game.add.sprite(1300, 1130, 'bush');
-        bush107.scale.setTo(0.5, 0.5);
         bush108 = game.add.sprite(1350, 1130, 'bush');
-        bush108.scale.setTo(0.5, 0.5);
         bush109 = game.add.sprite(1400, 1130, 'bush');
-        bush109.scale.setTo(0.5, 0.5);
 
 
         //bush27 = game.add.sprite(0, 580, 'bush');
-        //bush27.scale.setTo(0.5, 0.5);
         //bush28 = game.add.sprite(55, 580, 'bush');
-        //bush28.scale.setTo(0.5, 0.5);
         //bush29 = game.add.sprite(110, 580, 'bush');
-        //bush29.scale.setTo(0.5, 0.5);
         bush110 = game.add.sprite(165, 730, 'bush');
-        bush110.scale.setTo(0.5, 0.5);
         bush111 = game.add.sprite(220, 730, 'bush');
-        bush111.scale.setTo(0.5, 0.5);
         bush112 = game.add.sprite(275, 730, 'bush');
-        bush112.scale.setTo(0.5, 0.5);
         bush113 = game.add.sprite(330, 730, 'bush');
-        bush113.scale.setTo(0.5, 0.5);
         bush114 = game.add.sprite(385, 730, 'bush');
-        bush114.scale.setTo(0.5, 0.5);
         bush115 = game.add.sprite(440, 730, 'bush');
-        bush115.scale.setTo(0.5, 0.5);
         bush116 = game.add.sprite(495, 730, 'bush');
-        bush116.scale.setTo(0.5, 0.5);
         bush117 = game.add.sprite(550, 730, 'bush');
-        bush117.scale.setTo(0.5, 0.5);
         bush118 = game.add.sprite(605, 730, 'bush');
-        bush118.scale.setTo(0.5, 0.5);
         bush120 = game.add.sprite(660, 730, 'bush');
-        bush120.scale.setTo(0.5, 0.5);
         bush121= game.add.sprite(715, 730, 'bush');
-        bush121.scale.setTo(0.5, 0.5);
         bush122 = game.add.sprite(770, 730, 'bush');
-        bush122.scale.setTo(0.5, 0.5);
         bush123 = game.add.sprite(825, 730, 'bush');
-        bush123.scale.setTo(0.5, 0.5);
         bush124 = game.add.sprite(880, 730, 'bush');
-        bush124.scale.setTo(0.5, 0.5);
         bush125 = game.add.sprite(935, 730, 'bush');
-        bush125.scale.setTo(0.5, 0.5);
         bush126 = game.add.sprite(990, 730, 'bush');
-        bush126.scale.setTo(0.5, 0.5);
         bush127 = game.add.sprite(1045, 730, 'bush');
-        bush127.scale.setTo(0.5, 0.5);
         
         bush128 = game.add.sprite(165, 930, 'bush');
-        bush128.scale.setTo(0.5, 0.5);
         bush129 = game.add.sprite(165, 980, 'bush');
-        bush129.scale.setTo(0.5, 0.5);
         bush130 = game.add.sprite(165, 1030, 'bush');
-        bush130.scale.setTo(0.5, 0.5);
         bush131 = game.add.sprite(165, 1080, 'bush');
-        bush131.scale.setTo(0.5, 0.5);
         bush132 = game.add.sprite(165, 1130, 'bush');
-        bush132.scale.setTo(0.5, 0.5);
         bush133 = game.add.sprite(165, 1180, 'bush');
-        bush133.scale.setTo(0.5, 0.5);
         bush134 = game.add.sprite(165, 1230, 'bush');
-        bush134.scale.setTo(0.5, 0.5);
         bush135 = game.add.sprite(165, 1280, 'bush');
-        bush135.scale.setTo(0.5, 0.5);
         bush136 = game.add.sprite(165, 1330, 'bush');
-        bush136.scale.setTo(0.5, 0.5);
 
         //bush27 = game.add.sprite(0, 1080, 'bush');
-        //bush27.scale.setTo(0.5, 0.5);
         //bush28 = game.add.sprite(55, 1080, 'bush');
-        //bush28.scale.setTo(0.5, 0.5);
         //bush29 = game.add.sprite(110, 1080, 'bush');
-        //bush29.scale.setTo(0.5, 0.5);
         bush137 = game.add.sprite(165, 1380, 'bush');
-        bush137.scale.setTo(0.5, 0.5);
         bush138 = game.add.sprite(220, 1380, 'bush');
-        bush138.scale.setTo(0.5, 0.5);
         bush139 = game.add.sprite(275, 1380, 'bush');
-        bush139.scale.setTo(0.5, 0.5);
         bush141 = game.add.sprite(330, 1380, 'bush');
-        bush141.scale.setTo(0.5, 0.5);
         bush142 = game.add.sprite(385, 1380, 'bush');
-        bush142.scale.setTo(0.5, 0.5);
         bush143 = game.add.sprite(440, 1380, 'bush');
-        bush143.scale.setTo(0.5, 0.5);
         bush144 = game.add.sprite(495, 1380, 'bush');
-        bush144.scale.setTo(0.5, 0.5);
         bush145 = game.add.sprite(550, 1380, 'bush');
-        bush145.scale.setTo(0.5, 0.5);
         bush146 = game.add.sprite(605, 1380, 'bush');
-        bush146.scale.setTo(0.5, 0.5);
         bush147 = game.add.sprite(660, 1380, 'bush');
-        bush147.scale.setTo(0.5, 0.5);
         bush148 = game.add.sprite(715, 1380, 'bush');
-        bush148.scale.setTo(0.5, 0.5);
         bush149 = game.add.sprite(770, 1380, 'bush');
-        bush149.scale.setTo(0.5, 0.5);
         bush150 = game.add.sprite(825, 1380, 'bush');
-        bush150.scale.setTo(0.5, 0.5);
         bush151 = game.add.sprite(880, 1380, 'bush');
-        bush151.scale.setTo(0.5, 0.5);
         bush152 = game.add.sprite(935, 1380, 'bush');
-        bush152.scale.setTo(0.5, 0.5);
         bush153 = game.add.sprite(990, 1380, 'bush');
-        bush153.scale.setTo(0.5, 0.5);
         bush154 = game.add.sprite(1045, 1380, 'bush');
-        bush154.scale.setTo(0.5, 0.5);
         bush155 = game.add.sprite(1100, 1380, 'bush');
-        bush155.scale.setTo(0.5, 0.5);
         bush156 = game.add.sprite(1155, 1380, 'bush');
-        bush156.scale.setTo(0.5, 0.5);
         bush157 = game.add.sprite(1210, 1380, 'bush');
-        bush157.scale.setTo(0.5, 0.5);
         bush158 = game.add.sprite(1265, 1380, 'bush');
-        bush158.scale.setTo(0.5, 0.5);
         bush159 = game.add.sprite(1320, 1380, 'bush');
-        bush159.scale.setTo(0.5, 0.5);
         bush160 = game.add.sprite(1375, 1380, 'bush');
-        bush160.scale.setTo(0.5, 0.5);
         bush161 = game.add.sprite(1430, 1380, 'bush');
-        bush161.scale.setTo(0.5, 0.5);
         bush162 = game.add.sprite(1485, 1380, 'bush');
-        bush162.scale.setTo(0.5, 0.5);
 
         otherdog = game.add.sprite(1380, 500, 'otherdog');
         otherdog.scale.setTo(0.3, 0.3);
@@ -783,26 +623,42 @@ var mainState = {
     game.physics.arcade.collide(playerdown, bush162);
 
     if (game.physics.arcade.collide(playerdown,house1)){
-        text.visible = false;
+        text.visible =false;
+        text3.visible = false;
+        text4.visible = false;
+        text5.visible = false;
+        text6.visible = false;
         text2.visible = true;
         
     }
 
      else if (game.physics.arcade.collide(playerdown,tree1)){
         text3.visible = false;
+        text6.visible = false;
+        text5.visible = false;
+        text2.visible = false;
+        text.visible = false;
         text4.visible = true;
     }
 
     else if (game.physics.arcade.collide(playerdown,otherdog)){
         text2.visible = false;
+        text.visible = false;
+        text4.visible = false;
+        text5.visible = false;
+        text6.visible = false;
         text3.visible = true;
     }
 
 
     else if (game.physics.arcade.collide(playerdown,redcar)){
         text4.visible = false;
+        text.visible = false;
+        text2.visible = false;
+        text5.visible = false;
         text3.visible = false;
         text6.visible = true;
+
     }
 
 
